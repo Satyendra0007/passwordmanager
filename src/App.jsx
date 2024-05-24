@@ -28,17 +28,6 @@ function App() {
   const showPass = () => {
     passRef.current.type = !show ? "text" : "password"
     setShow(!show)
-    toast('Text Copied', {
-      position: "top-right",
-      autoClose: 1000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "light",
-    });
-
   }
 
 
@@ -60,28 +49,25 @@ function App() {
     if (conf) {
       const newArray = formArray.filter(elem => id !== elem.id)
       setFormArray(newArray)
-      toast('Text Copied', {
-        position: "top-right",
-        autoClose: 1000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
+      // toast('Text Copied', {
+      //   position: "top-right",
+      //   autoClose: 1000,
+      //   hideProgressBar: false,
+      //   closeOnClick: true,
+      //   pauseOnHover: true,
+      //   draggable: true,
+      //   progress: undefined,
+      //   theme: "light",
+      // });
     }
   }
 
   const handleEdit = (id) => {
     const index = formArray.findIndex(elem => elem.id === id);
     setForm(formArray[index])
-    handleDelete(id)
+    const newArray = formArray.filter(elem => id !== elem.id)
+    setFormArray(newArray)
   }
-
-  useEffect(() => {
-    console.log(formArray)
-  }, [formArray])
 
   useEffect(() => {
     if (localStorage.getItem("passwords"))
@@ -93,9 +79,7 @@ function App() {
       saveToLocal();
   }, [formArray])
 
-
   return (
-
 
     <>
       <ToastContainer

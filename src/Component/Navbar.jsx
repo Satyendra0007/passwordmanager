@@ -11,10 +11,12 @@ export default function Navbar() {
         <span className='text-teal-600' > /&gt;</span>
       </div>
       <div>
-        <button className="button flex justify-center items-center gap-1 bg-primary p-2 rounded-full font-semibold text-sm">
-          <IoLogoGithub size={22} />
-          <span>GitHub</span>
-        </button>
+        <a href="https://github.com/Satyendra0007/passwordmanager.git" target='_blank'>
+          <button className="button flex justify-center items-center gap-1 bg-primary p-2 rounded-full font-semibold text-sm">
+            <IoLogoGithub size={22} />
+            <span>GitHub</span>
+          </button>
+        </a>
       </div>
     </nav>
   )
