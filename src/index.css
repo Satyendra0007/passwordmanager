@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Reddit Mono", monospace;
+}
+
+@layer base {
+  .bg-primary {
+    @apply bg-gradient-to-r from-rose-400 to-fuchsia-400
+  }
+
+  .text-primary {
+    @apply text-rose-500
+  }
+
+  .bg-secondory {
+    @apply bg-rose-100
+  }
+}
+
+@layer components {
+  .mycontainer {
+    @apply container mx-auto max-w-7xl
+  }
+}
