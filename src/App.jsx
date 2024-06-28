@@ -6,8 +6,7 @@ import { FaRegEyeSlash } from "react-icons/fa6";
 import { FaRegEye } from "react-icons/fa6";
 import { useEffect, useRef, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid'
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-toastify';
 
 
 function App() {
@@ -42,23 +41,15 @@ function App() {
       user: "",
       pass: ""
     })
+    toast.success("Password Saved Successfully ")
   }
 
   const handleDelete = (id) => {
     const conf = confirm("Do you really want to delete !")
     if (conf) {
       const newArray = formArray.filter(elem => id !== elem.id)
+      toast.success("Password Deleted Successfully ")
       setFormArray(newArray)
-      // toast('Text Copied', {
-      //   position: "top-right",
-      //   autoClose: 1000,
-      //   hideProgressBar: false,
-      //   closeOnClick: true,
-      //   pauseOnHover: true,
-      //   draggable: true,
-      //   progress: undefined,
-      //   theme: "light",
-      // });
     }
   }
 
@@ -82,20 +73,6 @@ function App() {
   return (
 
     <>
-      <ToastContainer
-        position="top-right"
-        autoClose={1000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-      />
-      {/* Same as */}
-      <ToastContainer />
 
       <div className="intro mycontainer mx-auto flex flex-col items-center justify-center my-3">
         <div className="logo">

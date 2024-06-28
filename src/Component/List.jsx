@@ -3,43 +3,18 @@ import { FaGlobeAfrica } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 import { RiLockPasswordFill } from "react-icons/ri";
 import { FaCopy } from "react-icons/fa";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-toastify';
 
 export default function List({ id, url, user, pass, handleEdit, handleDelete }) {
 
   const handleCopy = (text) => {
     navigator.clipboard.writeText(text)
-    toast('Text Copied', {
-      position: "top-right",
-      autoClose: 1000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "light",
-    });
+    toast('Text Copied');
   }
 
 
   return (
     <>
-
-      <ToastContainer
-        position="top-right"
-        autoClose={1000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-      />
-      {/* Same as */}
-      <ToastContainer />
 
       {/* ---------------- for md devices --------------------------  */}
       <div className='hidden bg-secondory p-2 md:flex justify-between  shadow-xl  space-y-3 '>

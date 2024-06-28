@@ -12,7 +12,7 @@ export default function Navbar() {
       </div>
       <div>
         <a href="https://github.com/Satyendra0007/passwordmanager.git" target='_blank'>
-          <button className="button flex justify-center items-center gap-1 bg-primary p-2 rounded-full font-semibold text-sm">
+          <button className="button flex justify-center items-center gap-1 bg-primary border border-rose-500 p-2 rounded-full font-semibold text-sm md:hover:scale-105 transition-all duration-300 ease-in-out ">
             <IoLogoGithub size={22} />
             <span>GitHub</span>
           </button>

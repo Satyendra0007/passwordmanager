@@ -26,3 +26,7 @@
     @apply container mx-auto max-w-7xl
   }
 }
+
+.toast-stlye {
+  font-size: 12px;
+}
